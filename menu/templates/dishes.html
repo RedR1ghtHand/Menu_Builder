@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Dishes{% endblock %}
+{% block content %}
+    <section>
+        <h2>Our Dishes</h2>
+        <form method="get" action="{% url 'dish_list' %}">
+            <select name="category" onchange="this.form.submit()">
+                <option value="">All</option>
+                {% for category in categories %}
+                    <option value="{{ category.name }}" {% if category.name == request.GET.category %}selected{% endif %}>{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </form>
+        <div class="dishes-container">
+            {% for dish in dishes %}
+                <div class="dish">
+                    <a href="{% url 'dish_detail' dish.id %}">
+                        <div class="dish-content">
+                            <div class="image-container">
+                                <img src="{% if dish.image %}{{ dish.image.url }}{% else %}/static/default_image.jpg{% endif %}" alt="{{ dish.name }}">
+                            </div>
+                            <h3>{{ dish.name }}</h3>
+                            <p>Description: {{ dish.description }}</p>
+                        </div>
+                    </a>
+                </div>
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                    </div>
+                    <div class="dishes-container">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

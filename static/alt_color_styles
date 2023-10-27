@@ -1,0 +1,157 @@
+#3A3920
+#807622
+#EAA724
+#D25B01
+#5B1C02
+
+/* Header styles */
+.site-header {
+    background-color: #EAA724; /* Header background color */
+    color: #3A3920; /* Text color in the site header */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image styles */
+.logo {
+    width: 100px; /* Logo image width (adjust to your preference) */
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button styles */
+.button {
+    background-color: #807622; /* Button background color */
+    color: #3A3920; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button hover styles */
+.button:hover {
+    background-color: #D25B01; /* Button background color on hover */
+}
+
+/* Site content container styles */
+.site-content {
+    margin: 20px;
+}
+
+/* Dishes container styles */
+.dishes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Dish item styles */
+.dish {
+    width: calc(33.33% - 20px); /* Calculate width with a 20px gap between dishes */
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #5B1C02; /* Border color for dish items */
+}
+
+/* Dish content styles */
+.dish-content {
+    text-align: center;
+}
+
+/* Dish image styles */
+.dish img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* If you want to fit the image inside a frame */
+    /* Other styles for images */
+}
+
+/* Image container styles */
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px; /* Define a maximum height (optional) */
+}
+
+/* List item styles */
+li {
+    border: 1px solid #5B1C02; /* Border color for list items */
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Body styles */
+body {
+    background-color: #DDE2DC; /* Site background color */
+}
+
+/* Heading 2 styles */
+h2 {
+    color: #807622; /* Text color for section headings */
+}
+
+/* Paragraph styles */
+p {
+    color: #3A3920; /* Text color for paragraphs */
+}
+
+/* Logout button styles */
+.logout-button {
+    display: inline-block; /* Use inline-block instead of block */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #807622; /* Button background color */
+    color: #808080; /* Text color on the button */
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Dropdown select styles */
+select {
+    padding: 10px;
+    border: 2px solid #807622; /* Border color for the select dropdown */
+    border-radius: 1px;
+    width: 160px;
+    background-color: #EAA724; /* Default background color */
+    color: #807622; /* Default text color */
+    font-size: 16px; /* Default font size */
+}
+
+/* Styles for options within the dropdown */
+select option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #EAA724;
+    color: #3A3920;
+}
+
+/* Styles for the selected option (when the dropdown is closed) */
+select option:checked {
+    font-weight: bold;
+    background-color: #D25B01;
+    color: #fff;
+    font-size: 18px; /* Change the font size as desired */
+}

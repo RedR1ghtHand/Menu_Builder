@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'dishes_by_category' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

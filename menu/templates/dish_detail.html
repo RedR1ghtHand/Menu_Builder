@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Dish Detail{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>{{ dish.name }}</h2>
+        {% if dish.image %}
+            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" width="400">
+        {% else %}
+            <img src="/static/default_image.jpg" alt="Default Image" width="400">
+        {% endif %}
+        <p>Description: {{ dish.description }}</p>
+        <p>Ingredients:</p>
+        <ul>
+            {% for dish_ingredient in dish.dishingredient_set.all %}
+                <li>{{ dish_ingredient.amount }} {{ dish_ingredient.ingredient.unit_of_measurement }} of
+                    {{ dish_ingredient.ingredient.name }} ({{ dish_ingredient.ingredient.category }})</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
+
